@@ -1,12 +1,13 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { Container } from './styles';
+import Background from '../../components/Background';
+// import { Container } from './styles';
 
 const Convert = () => (
-  <Container>
+  <Background>
     <Text>Convert</Text>
-  </Container>
+  </Background>
 );
 
 export default Convert;

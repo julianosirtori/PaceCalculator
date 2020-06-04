@@ -1,12 +1,13 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { Container } from './styles';
+import Background from '../../components/Background';
+// import { Container } from './styles';
 
 const Predict = () => (
-  <Container>
+  <Background>
     <Text>Predict</Text>
-  </Container>
+  </Background>
 );
 
 export default Predict;

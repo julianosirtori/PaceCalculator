@@ -1,12 +1,13 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { Container } from './styles';
+import Background from '../../components/Background';
+// import { Container } from './styles';
 
 const Pace = () => (
-  <Container>
+  <Background>
     <Text>Pace</Text>
-  </Container>
+  </Background>
 );
 
 export default Pace;
