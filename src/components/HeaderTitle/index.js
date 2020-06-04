@@ -5,7 +5,8 @@ const HeaderTitle = styled.Text`
   font-size: 24px;
   font-weight: bold;
   margin-top: 48px;
-  margin-left: 22px;
+  margin-left: 16px;
+  margin-bottom: 32px;
 `;
 
 export default HeaderTitle;
