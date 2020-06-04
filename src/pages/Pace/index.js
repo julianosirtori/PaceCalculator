@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
 
+import HeaderTitle from '../../components/HeaderTitle';
 import Background from '../../components/Background';
 // import { Container } from './styles';
 
 const Pace = () => (
   <Background>
-    <Text>Pace</Text>
+    <HeaderTitle>Calculadora de Pace</HeaderTitle>
   </Background>
 );
 

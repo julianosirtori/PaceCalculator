@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
 
+import HeaderTitle from '../../components/HeaderTitle';
 import Background from '../../components/Background';
 // import { Container } from './styles';
 
 const Splits = () => (
   <Background>
-    <Text>Convert</Text>
+    <HeaderTitle>Ritmo por volta</HeaderTitle>
   </Background>
 );
 

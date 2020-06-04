@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
 
+import HeaderTitle from '../../components/HeaderTitle';
 import Background from '../../components/Background';
 // import { Container } from './styles';
 
 const Convert = () => (
   <Background>
-    <Text>Convert</Text>
+    <HeaderTitle>Calculadora</HeaderTitle>
   </Background>
 );
 
