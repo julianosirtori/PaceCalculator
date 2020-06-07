@@ -19,8 +19,9 @@ const Input = ({ label, type, ...props }) => {
 
   return (
     <Container>
-      <Label>{label}</Label>
+      {label && (<Label>{label}</Label>)}
       <InputText
+        keyboardType="numeric"
         value={value}
         onChangeText={(text) => changeTextByType(text)}
         {...props}

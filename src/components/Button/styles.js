@@ -7,7 +7,7 @@ export const Container = styled.TouchableOpacity`
   align-items: center;
   padding: 0 8px;
   border-radius: 4px;
-  height: 30px;
+  height: 38px;
 `;
 
 export const TextButton = styled.Text`

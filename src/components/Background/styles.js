@@ -4,7 +4,7 @@ export const Container = styled.SafeAreaView`
   height: 100%;
   width: 100%;
   background: #F0F0F5;
-  padding: 16px;
+  padding-top: 16px;
 `;
 
 export const Image = styled.Image`
@@ -12,4 +12,8 @@ export const Image = styled.Image`
   position: absolute;
   top: -42px;
   right: -65px;
+`;
+
+export const ScrollView = styled.ScrollView`
+  
 `;

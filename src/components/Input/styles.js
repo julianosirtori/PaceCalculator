@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex-direction: column;
+  flex-grow: 2;
 `;
 
 export const Label = styled.Text`
@@ -17,7 +18,7 @@ export const InputText = styled.TextInput`
   border: 1px solid #DEDEDE;
   border-radius: 4px;
   font-size: 14px;
-  padding: 8px 16px;
+  padding: 4px 16px;
   font-weight: bold;
   text-align: center;
 `;

@@ -1,22 +1,44 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import HeaderTitle from '../../components/HeaderTitle';
-import Button from '../../components/Button';
-import Input from '../../components/Input';
-import Card from '../../components/Card';
 import Background from '../../components/Background';
-// import { Container } from './styles';
+
+import {
+  CardContent, ContentRow, InputStyled, ButtonConvert, ContentCollumn, ButtonLong,
+} from './styles';
 
 const Convert = () => (
   <Background>
     <HeaderTitle>Calculadora</HeaderTitle>
-    <Card>
-      <Text>TESTE</Text>
-      <Button icon="arrow-left-right-bold" />
-      <Input type="time" placeholder="00:00:00" label="Pace (min/km)" />
-      <Input type="kmh" placeholder="Kilometros por hora" label="Velocidade (km/h)" />
-    </Card>
+    <CardContent>
+      <ContentRow>
+        <InputStyled type="time" placeholder="min/km" label="Pace" />
+        <ButtonConvert icon="arrow-left-right-bold" />
+
+        <InputStyled type="kmh" placeholder=" km/h" label="Velocidade" />
+      </ContentRow>
+
+    </CardContent>
+    <CardContent>
+      <ContentCollumn>
+        <ContentRow>
+          <InputStyled type="time" placeholder="min/km" />
+          <ButtonLong icon="timer">Tempo</ButtonLong>
+        </ContentRow>
+      </ContentCollumn>
+      <ContentCollumn>
+        <ContentRow>
+          <InputStyled type="kmh" placeholder=" km/h" />
+          <ButtonLong icon="run-fast">Velocidade</ButtonLong>
+        </ContentRow>
+      </ContentCollumn>
+      <ContentCollumn>
+        <ContentRow>
+          <InputStyled type="kmh" placeholder=" km/h" />
+          <ButtonLong icon="road">Distancia</ButtonLong>
+        </ContentRow>
+      </ContentCollumn>
+    </CardContent>
   </Background>
 );
 
