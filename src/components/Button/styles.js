@@ -14,4 +14,6 @@ export const TextButton = styled.Text`
   color: #fff;
   font-weight: bold;
   font-size: 14px;
+  text-align: center;
+  flex: 1;
 `;

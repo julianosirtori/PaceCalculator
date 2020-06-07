@@ -14,10 +14,8 @@ const Convert = () => (
       <ContentRow>
         <InputStyled type="time" placeholder="min/km" label="Pace" />
         <ButtonConvert icon="arrow-left-right-bold" />
-
         <InputStyled type="kmh" placeholder=" km/h" label="Velocidade" />
       </ContentRow>
-
     </CardContent>
     <CardContent>
       <ContentCollumn>

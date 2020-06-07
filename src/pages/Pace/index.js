@@ -2,7 +2,7 @@ import React from 'react';
 
 import HeaderTitle from '../../components/HeaderTitle';
 import Background from '../../components/Background';
-// import { Container } from './styles';
+// import { Conztainer } from './styles';
 
 const Pace = () => (
   <Background>
