@@ -34,7 +34,7 @@ const Predict = () => (
       <ContentBody>
         <FirstInfo>
           <ImageCenter source={PreditorImage} />
-          <TextInfo>Insira o Tempo e a Distancia para aparecer os ritmos de volta aqui</TextInfo>
+          <TextInfo>Insira os dados acima para calcular o tempo preditado</TextInfo>
         </FirstInfo>
       </ContentBody>
     </CardContent>
