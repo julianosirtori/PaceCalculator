@@ -12,6 +12,7 @@ export const CardContent = styled(Card)`
 
 export const InputStyled = styled(Input)`
   margin-right: 16px;
+  width: 90px;
   
 `;
 

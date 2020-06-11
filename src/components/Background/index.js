@@ -6,7 +6,7 @@ import { Container, Image, ScrollView } from './styles';
 const Background = ({ children }) => (
   <Container>
     <Image source={Shoes} />
-    <ScrollView>
+    <ScrollView keyboardShouldPersistTaps="handled">
       {children}
     </ScrollView>
 

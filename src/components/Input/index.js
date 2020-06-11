@@ -1,33 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Container, Label, InputText } from './styles';
+import {
+  Container, Label, InputText,
+} from './styles';
 
-const Input = ({ label, type, ...props }) => {
-  const [value, setValue] = useState('');
+const Input = ({
+  label, style, type, ...props
+}) => (
+  <Container style={style}>
+    {label && (<Label>{label}</Label>)}
+    <InputText
+      {...props}
+      keyboardType="numeric"
+      style={{}}
+    />
 
-  function changeTextByType(text, teste) {
-    let newValue = text;
-    if (type === 'kmh') {
-      newValue = newValue.includes('km') ? newValue.split(' km')[0] : newValue;
-
-      setValue(`${newValue} km`);
-    } else {
-      setValue(teste);
-    }
-    // setValue(text);
-  }
-
-  return (
-    <Container>
-      {label && (<Label>{label}</Label>)}
-      <InputText
-        keyboardType="numeric"
-        value={value}
-        onChangeText={(text) => changeTextByType(text)}
-        {...props}
-      />
-    </Container>
-  );
-};
+  </Container>
+);
 
 export default Input;
