@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import RadioForm from 'react-native-simple-radio-button';
-import mask from '../../utils/masks';
+import { paceVelocidadeRitmo } from '../../math/convert';
 import Card from '../Card';
 
 import {
@@ -9,17 +9,40 @@ import {
 } from './styles';
 
 const types = [
-  { label: 'min/km', value: 0 },
-  { label: 'min/milha', value: 1 },
+  { label: 'min/km', value: 'km' },
+  { label: 'min/milha', value: 'milha' },
 ];
 
 const SpeedConverter = () => {
   const [speed, setSpeed] = useState('');
-  const [type, setType] = useState(0);
+  const [type, setType] = useState('km');
 
-  function calc() {
+  const [minKm, setMinKm] = useState(0);
+  const [kmH, setKmH] = useState(0);
+  const [minMilha, setMinMilha] = useState(0);
+  const [milhasH, setMilhasH] = useState(0);
+  const [min400, setMin400] = useState(0);
 
+  const [showResults, setShowResults] = useState(false);
+
+  function submit() {
+    setShowResults(true);
+
+    let tempo = 60 / speed;
+    tempo *= 60;
+
+
+    if (type === 'milha') tempo /= 1.6;
+
+    const results = paceVelocidadeRitmo(tempo);
+
+    setMinKm(results.minKm);
+    setKmH(results.kmH);
+    setMinMilha(results.minMilha);
+    setMilhasH(results.milhasH);
+    setMin400(results.min400);
   }
+
 
   return (
     <Card title="Conversor de Velocidade">
@@ -28,7 +51,7 @@ const SpeedConverter = () => {
           <InputStyled
             placeholder="Km/h"
             value={speed}
-            onChangeText={(text) => setSpeed(mask.distance(text))}
+            onChangeText={(text) => setSpeed(text)}
             label="Velocidade (km/h)"
           />
           <RadioForm
@@ -39,34 +62,36 @@ const SpeedConverter = () => {
             buttonSize={12}
             selectedLabelColor="#322153"
             selectedButtonColor="#2FB86E"
-            onPress={(value) => { setType({ value }); }}
+            onPress={(value) => { setType(value); }}
           />
-          <ButtonStyled>
+          <ButtonStyled onPress={submit}>
             Calcular
           </ButtonStyled>
         </Form>
-        <Results>
-          <Result>
-            <Value>00:06:50</Value>
-            <Label>min/km</Label>
-          </Result>
-          <Result>
-            <Value>3.9</Value>
-            <Label>km/h</Label>
-          </Result>
-          <Result>
-            <Value>00:24:57</Value>
-            <Label>min/milha</Label>
-          </Result>
-          <Result>
-            <Value>2.4</Value>
-            <Label>milhas/h</Label>
-          </Result>
-          <Result>
-            <Value>00:06:12</Value>
-            <Label>min/400m</Label>
-          </Result>
-        </Results>
+        {showResults && (
+          <Results>
+            <Result>
+              <Value>{minKm}</Value>
+              <Label>min/km</Label>
+            </Result>
+            <Result>
+              <Value>{kmH}</Value>
+              <Label>km/h</Label>
+            </Result>
+            <Result>
+              <Value>{minMilha}</Value>
+              <Label>min/milha</Label>
+            </Result>
+            <Result>
+              <Value>{milhasH}</Value>
+              <Label>milhas/h</Label>
+            </Result>
+            <Result>
+              <Value>{min400}</Value>
+              <Label>min/400m</Label>
+            </Result>
+          </Results>
+        )}
       </Content>
     </Card>
   );
