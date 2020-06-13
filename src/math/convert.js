@@ -43,16 +43,16 @@ export function paceVelocidadeRitmo(tempo) {
 }
 
 // // Tempo 00:01:00 para segundos
-// function ferramentasTempoParaSegundo(minuto) {
-//   minuto = minuto.split(':');
+export function ferramentasTempoParaSegundo(minuto) {
+  minuto = minuto.split(':');
 
-//   let segundo = parseInt(minuto[minuto.length - 1]);
-//   if (minuto[minuto.length - 2] !== undefined) segundo += parseInt(minuto[minuto.length - 2]) * 60;
-//   if (minuto[minuto.length - 3] !== undefined) segundo += parseInt(minuto[minuto.length - 3]) * 60 * 60;
-//   // segundo +=  minuto[minuto.length - 4] * 60 * 60 * 24;
+  let segundo = parseInt(minuto[minuto.length - 1]);
+  if (minuto[minuto.length - 2] !== undefined) segundo += parseInt(minuto[minuto.length - 2]) * 60;
+  if (minuto[minuto.length - 3] !== undefined) segundo += parseInt(minuto[minuto.length - 3]) * 60 * 60;
+  // segundo +=  minuto[minuto.length - 4] * 60 * 60 * 24;
 
-//   return segundo;
-// }
+  return segundo;
+}
 
 
 // function ferramentas_pace_velocidade_ritmo() {

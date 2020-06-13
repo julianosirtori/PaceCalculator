@@ -4,10 +4,12 @@ import HeaderTitle from '../../components/HeaderTitle';
 import Background from '../../components/Background';
 
 import SpeedConverter from '../../components/SpeedConverter';
+import RateConverter from '../../components/RateConverter';
 
 const Convert = () => (
   <Background>
-    <HeaderTitle>Calculadora</HeaderTitle>
+    <HeaderTitle>Conversores</HeaderTitle>
+    <RateConverter />
     <SpeedConverter />
   </Background>
 );

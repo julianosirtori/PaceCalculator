@@ -8,6 +8,7 @@ export const Container = styled.View.attrs({
   padding: 16px 16px;
   margin-left: 16px;
   margin-right: 16px;
+  margin-bottom: 16px;
 
 `;
 
