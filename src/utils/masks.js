@@ -6,6 +6,14 @@ const maks = {
       .replace(/(\d{2})(\d)/, '$1:$2')
       .replace(/(:\d{2})\d+?$/, '$1');
   },
+  fulltime(value){
+    // 00:00
+    return value
+    .replace(/\D/g, '')
+    .replace(/(\d{2})(\d)/, '$1:$2')
+    .replace(/(\d{2})(\d)/, '$1:$2')
+    .replace(/(:\d{2})\d+?$/, '$1');
+  },
   // 1,00 km/h
   distance(value) {
     return value

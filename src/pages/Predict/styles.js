@@ -57,3 +57,16 @@ export const TextInfo = styled.Text`
    width: 220px;
    text-align: center;
 `;
+
+export const LabelResult = styled.Text`
+  color: #322153;
+  font-size: 18px;
+  font-weight: bold;
+
+`;
+
+export const Result = styled.Text`
+  color: #322153;
+  font-size: 36px;
+  font-weight: bold;
+`;
