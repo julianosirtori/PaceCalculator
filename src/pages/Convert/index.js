@@ -1,17 +1,16 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import HeaderTitle from '../../components/HeaderTitle';
-import Card from '../../components/Card';
 import Background from '../../components/Background';
-// import { Container } from './styles';
+
+import SpeedConverter from '../../components/SpeedConverter';
+import RateConverter from '../../components/RateConverter';
 
 const Convert = () => (
   <Background>
-    <HeaderTitle>Calculadora</HeaderTitle>
-    <Card>
-      <Text>TESTE</Text>
-    </Card>
+    <HeaderTitle>Conversores</HeaderTitle>
+    <RateConverter />
+    <SpeedConverter />
   </Background>
 );
 

@@ -5,9 +5,18 @@ export const Container = styled.View.attrs({
 })`
   background: #F7F7F7;
   border-radius: 4px;
-  width: 100%;
-  /* margin-left: 12px; */
-  /* margin-right: 12px; */
-  padding: 16px 8px;
+  padding: 16px 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
 
+`;
+
+export const Title = styled.Text`
+  color: #322153;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8px;
 `;

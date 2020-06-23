@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Title } from './styles';
 
-const Card = ({ children }) => (
-  <Container>
+const Card = ({ children, title, ...props }) => (
+  <Container {...props}>
+    {title && (<Title>{title}</Title>)}
     {children}
   </Container>
 );

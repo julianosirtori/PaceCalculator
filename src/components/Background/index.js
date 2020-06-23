@@ -1,12 +1,15 @@
 import React from 'react';
 
 import Shoes from '../../assets/img/shoes.png';
-import { Container, Image } from './styles';
+import { Container, Image, ScrollView } from './styles';
 
 const Background = ({ children }) => (
   <Container>
     <Image source={Shoes} />
-    {children}
+    <ScrollView keyboardShouldPersistTaps="handled">
+      {children}
+    </ScrollView>
+
   </Container>
 );
 
